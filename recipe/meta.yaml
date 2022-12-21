@@ -1,6 +1,6 @@
 {% set name = "datacache" %}
-{% set version = "1.1.5" %}
-{% set sha256 = "b2ca31b2b9d3803a49645ab4f5b30fdd0820e833a81a6952b4ec3a68c8ee24a7" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "ed24c419ed9791ef0f0375ca5552b2300922235ee9ffa81d200f002c6f7d7955" %}
 
 package:
   name: {{ name|lower }}
@@ -13,10 +13,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
@@ -38,8 +38,8 @@ about:
   home: https://github.com/openvax/datacache
   license: Apache-2.0
   license_family: Apache
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'Helpers for transparently downloading datasets'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: Helpers for transparently downloading datasets
 
 extra:
   recipe-maintainers:
