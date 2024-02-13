@@ -1,6 +1,6 @@
 {% set name = "datacache" %}
-{% set version = "1.1.5" %}
-{% set sha256 = "b2ca31b2b9d3803a49645ab4f5b30fdd0820e833a81a6952b4ec3a68c8ee24a7" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "acfdbdc550c7e0971b42ec0575cec2245ec4ace1cdfb9e931852db157e5b6c67" %}
 
 package:
   name: {{ name|lower }}
@@ -13,10 +13,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
