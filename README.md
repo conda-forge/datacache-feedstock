@@ -40,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `datacache` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install datacache
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install datacache
 ```
 
-It is possible to list all of the versions of `datacache` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add datacache
+# for installing globally
+pixi global install datacache
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `datacache` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search datacache --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search datacache --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search datacache --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +118,8 @@ mamba repoquery whoneeds datacache --channel conda-forge
 # List dependencies of `datacache`:
 mamba repoquery depends datacache --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
