@@ -1,13 +1,13 @@
 {% set name = "datacache" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "5e80a6263d14340bbf02586ffc942baa5ce37af31f456095ef30537e97c353e9" %}
+{% set version = "1.9.0" %}
+{% set sha256 = "afec3fcb8140aafb3488e491d26943327b7eaf63153409929ff6fdf642f2f3e7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
